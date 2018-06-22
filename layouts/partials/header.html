@@ -19,12 +19,23 @@
             </a>
           </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <div class="collapse navbar-collapse">
               <ul class="nav navbar-nav navbar-right">
-                <li><a href="{{ .Site.BaseURL }}">{{ .Site.Params.home }}</a></li>
+                <li><a href="{{ .Site.BaseURL | relLangURL }}">{{ .Site.Params.home }}</a></li>
               {{ range .Site.Menus.header }}
-                <li><a href="{{ .URL }}/">{{ .Name }}</a></li>
+                <li><a href="{{ .URL | relLangURL }}/">{{ .Name }}</a></li>
               {{ end }}
+
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown">
+                      <!-- use globe icon and move to right -->{{ i18n "languages" }}
+                    </a>
+                    <ul class="dropdown-menu">
+                      {{ range .Site.Home.AllTranslations }}
+                        <li><a href="{{ .Permalink }}">{{ .Language.LanguageName }}</a></li>
+                      {{ end }}
+                    </ul-->
+                </li>
               </ul>
             </div><!-- /.navbar-collapse -->
           </div><!-- /.container-fluid -->

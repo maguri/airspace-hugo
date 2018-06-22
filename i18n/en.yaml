@@ -1,0 +1,7 @@
+# application:
+- id: languages
+  translation: Languages
+
+# work:
+- id: work.everything
+  translation: Everything

@@ -1,0 +1,7 @@
+# application:
+- id: languages
+  translation: Idiomas
+
+# work:
+- id: work.everything
+  translation: Todo
