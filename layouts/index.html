@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	
+
 	{{ partial "head.html" . }}
 
 </head>
@@ -21,8 +21,8 @@
 		{{ partial "feature.html" . }}
 	{{ end }}
 
-
-	{{ if and .Site.Data.service .Site.Data.service.enable }}
+	{{ $service := index .Site.Data.service .Lang }}
+	{{ if and $service $service.enable }}
 		{{ partial "service.html" . }}
 	{{ end }}
 
@@ -30,8 +30,9 @@
 		{{ partial "call-to-action.html" . }}
 	{{ end }}
 
-	{{ if .Site.Data.testimonial.enable }}
-		{{ partial "testimonial.html" . }}
+	{{ $testimonial := index .Site.Data.testimonial .Lang }}
+	{{ if $testimonial.enable }}
+		{{ partial "testimonial.html" $testimonial }}
 	{{ end }}
 
 	{{ partial "footer.html" . }}
