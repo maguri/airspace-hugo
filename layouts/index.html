@@ -21,8 +21,7 @@
 		{{ partial "feature.html" . }}
 	{{ end }}
 
-	{{ $service := index .Site.Data.service .Lang }}
-	{{ if and $service $service.enable }}
+	{{ if and (index .Site.Data.service .Lang) (index .Site.Data.service .Lang).enable }}
 		{{ partial "service.html" . }}
 	{{ end }}
 
@@ -30,9 +29,8 @@
 		{{ partial "call-to-action.html" . }}
 	{{ end }}
 
-	{{ $testimonial := index .Site.Data.testimonial .Lang }}
-	{{ if $testimonial.enable }}
-		{{ partial "testimonial.html" $testimonial }}
+	{{ if (index .Site.Data.testimonial .Lang).enable }}
+		{{ partial "testimonial.html" . }}
 	{{ end }}
 
 	{{ partial "footer.html" . }}

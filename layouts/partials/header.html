@@ -15,13 +15,13 @@
             <span class="icon-bar"></span>
             </button>
             <a class="navbar-brand" href="{{ .Site.BaseURL }}">
-              <img src="{{ .Site.BaseURL }}img/logo.png" alt="{{ .Site.Title }} Logo">
+              <img src="{{ .Site.BaseURL }}img/logo.png" alt="{{ .Site.Title }} Logo"><!--TODO: redirect to correct Lang home-->
             </a>
           </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse">
               <ul class="nav navbar-nav navbar-right">
-                <li><a href="{{ .Site.BaseURL | relLangURL }}">{{ .Site.Params.home }}</a></li>
+                <li><a href="{{ .Site.BaseURL | relLangURL }}">{{ .Site.Params.home }}</a></li><!--TODO: redirect to correct Lang home-->
               {{ range .Site.Menus.header }}
                 <li><a href="{{ .URL | relLangURL }}/">{{ .Name }}</a></li>
               {{ end }}

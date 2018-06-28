@@ -1,13 +1,12 @@
-
-
+{{ $testimonial := index .Site.Data.testimonial .Lang }}
 <!-- Content Start -->
 <section id="testimonial">
   <div class="container">
     <!-- Header -->
     <div class="row">
       <div class="section-title text-center">
-        <h2>{{ .testimonial.title }}</h2>
-        <p>{{ .testimonial.paragraph }}</p>
+        <h2>{{ $testimonial.title }}</h2>
+        <p>{{ $testimonial.paragraph }}</p>
       </div>
     </div>
 
@@ -16,7 +15,7 @@
         <div class="block">
           <!-- Content -->
           <ul class="counter-box clearfix">
-            {{ range .testimonial.numbers }}
+            {{ range $testimonial.numbers }}
             <li>
               <div class="block">
                 <i class="{{ .icon }}"></i>
@@ -31,7 +30,7 @@
       <div class="col-md-6">
         <div class="testimonial-carousel">
           <div id="testimonial-slider" class="owl-carousel">
-            {{ range .testimonial.people }}
+            {{ range $testimonial.people }}
             <div>
                 <img src="img/cotation.png" alt="IMG">
                 <p>"{{ .text }}"</p>
