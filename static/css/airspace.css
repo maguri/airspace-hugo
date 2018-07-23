@@ -3,7 +3,7 @@
  * In airspace, it is called style.css
  * However, style.css now holds additional styles for this jekyll port. (Not written by ThemeFisher)
  * The original style.css is now called airspace.css
- * 
+ *
  */
 
 /*
@@ -122,7 +122,7 @@ font header .navbar-default .navbar-nav li a:hover {
   right: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to left, #8b86a3, #322e40);
+  background: linear-gradient(to left, #8b86a3, #ff6737);
   opacity: 0.8;
 }
 #slider .block {
@@ -180,7 +180,7 @@ font header .navbar-default .navbar-nav li a:hover {
 }
 #service .service-item i {
   font-size: 60px;
-  color: #4A4656;
+  color: #ff6737;
 }
 #service .service-item h4 {
   padding-top: 20px;
@@ -383,7 +383,7 @@ font header .navbar-default .navbar-nav li a:hover {
   right: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to left, #928dab, #1f1c2c 70%);
+  background: linear-gradient(to left, #928dab, #ff6737 70%);
   opacity: 0.8;
 }
 #global-header .block {
@@ -631,7 +631,7 @@ font header .navbar-default .navbar-nav li a:hover {
   right: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to left, #928dab, #1f1c2c 70%);
+  background: linear-gradient(to left, #928dab, #ff6737 70%);
   opacity: 0.8;
 }
 #slider-contact .block {
@@ -662,22 +662,22 @@ font header .navbar-default .navbar-nav li a:hover {
   padding-top: 70px;
   padding-bottom: 35px;
 }
-#contact-form .block form .form-group {
+#contact-form .block .form-group {
   padding-bottom: 15px;
   margin: 0px;
 }
-#contact-form .block form .form-group .form-control {
+#contact-form .block .form-group .form-control {
   background: #F6F8FA;
   height: 60px;
   border: 1px solid #EEF2F6;
   box-shadow: none;
   width: 100%;
 }
-#contact-form .block form .form-group-2 {
+#contact-form .block .form-group-2 {
   padding-bottom: 15px;
   margin: 0px;
 }
-#contact-form .block form .form-group-2 textarea {
+#contact-form .block .form-group-2 textarea {
   background: #F6F8FA;
   height: 135px;
   border: 1px solid #EEF2F6;
@@ -687,7 +687,7 @@ font header .navbar-default .navbar-nav li a:hover {
 #contact-form .block button {
   width: 100%;
   height: 60px;
-  background: #47424C;
+  background: #fc7044;
   border: none;
   color: #fff;
   font-family: 'Open Sans', sans-serif;
