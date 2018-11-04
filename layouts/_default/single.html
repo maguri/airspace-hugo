@@ -37,8 +37,12 @@
             <p>{{ .Content }}</p>
 		      </div>
 	      </div>
-		  	<a href="/contact" class="btn btn-contact-form" type="button">Pedir más información </a>
-				<a href="/contact" class="btn btn-default" type="button">Solicitar presupuesto </a>
+	      {{ if eq .Section "products" }}
+					<a href="{{ $.Site.BaseURL }}contact" class="btn btn-default" type="button">Solicitar presupuesto </a>
+					{{ if isset .Params "pdf" }}
+			  		<a href="{{ .Params.pdf.link }}" class="btn btn-contact-form" type="button">Ver Documentación <i class="fa ion-document-text"></i></a>
+			  	{{ end }}
+		  	{{ end }}
 	    </div>
 	  </section>
 	</div>
