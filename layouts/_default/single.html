@@ -25,13 +25,6 @@
 	            {{ end }}
 	          </div>
 	        </div><!-- .col-md-7 close -->
-	        {{ if isset .Params "img" }}
-		        <div class="col-md-5 col-sm-12">
-			        <figure>
-			          <img src="{{ $.Site.BaseURL }}{{ .Params.img.url }}" alt="Img">
-			        </figure>
-			      </div>
-		      {{ end }}
 		      <div class="col-md-12 col-sm-12">
 						<hr />
             <p>{{ .Content }}</p>
@@ -40,7 +33,7 @@
 	      {{ if eq .Section "products" }}
 					<a href="{{ $.Site.BaseURL }}contact" class="btn btn-default" type="button">Solicitar presupuesto </a>
 					{{ if isset .Params "pdf" }}
-			  		<a href="{{ .Params.pdf.link }}" class="btn btn-contact-form" type="button">Ver Documentación <i class="fa ion-document-text"></i></a>
+			  		<a href="{{ .Params.pdf.link }}" target="_blank" class="btn btn-contact-form" type="button">Ver Documentación <i class="fa ion-document-text"></i></a>
 			  	{{ end }}
 		  	{{ end }}
 	    </div>
