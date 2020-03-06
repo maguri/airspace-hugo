@@ -1,7 +1,7 @@
 ################################# Default configuration ###################
 baseURL = "https://examplesite.com"
 title = "Airspace | Creative Agency Hugo Template"
-theme = "airspace-hugo"
+theme = "bmauri-theme"
 # post pagination
 paginate = "4"
 # post excerpt
@@ -38,7 +38,7 @@ link = "plugins/shuffle/shuffle.min.js"
 [[params.plugins.js]]
 link = "plugins/google-map/gmap.js"
 
-  
+
 ############################## navigation ###############################
 
 # main menu
@@ -76,7 +76,7 @@ hasChildren = true
   parent = "Pages"
   name = "Pricing"
   URL = "pricing"
-  
+
 [[menu.main]]
 name = "Contact"
 URL = "contact"
@@ -153,7 +153,7 @@ map_latitude = "51.5223477"
 map_longitude = "-0.1622023"
 map_marker = "images/marker.png"
 
-  
+
 ############################# social site ########################
 [[params.social]]
 icon = "ion-social-googleplus-outline" #ionicon pack v2 : https://ionicons.com/v2/
