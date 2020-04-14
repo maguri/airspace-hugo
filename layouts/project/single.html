@@ -8,11 +8,15 @@
   <div class="container">
     <div class="row">
       <div class="col-md-8">
+        {{ if .Params.video }}
+          {{ .Params.video | safeHTML }}
+        {{ else}}
         <img class="img-responsive w-100" src="{{ .Params.Image | relURL }}" alt="">
+        {{ end }}
       </div>
       <div class="col-md-4">
         <div class="project-details">
-          <h4>Project Details</h4>
+          <h4>{{ .Params.Subtitle }}</h4>
           <ul>
             {{ range .Params.Information }}
             <li><span>{{ .label }} :</span> <strong>{{ .info | markdownify }}</strong></li>
