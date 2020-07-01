@@ -117,7 +117,7 @@
           <div class="testimonial-slider owl-carousel">
             {{ range .testimonial_slider }}
             <div>
-              <i class="ion-quote"></i>
+              <i class="{{ .icon }}"></i>
               <p>"{{ .content | markdownify }}"</p>
               <div class="user">
                 <img src="{{ .image | relURL }}" alt="client">
