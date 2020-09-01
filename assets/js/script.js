@@ -1,7 +1,7 @@
 $(document).ready(function () {
 	'use strict';
 
-	// Preloader js    
+	// Preloader js
 	$(window).on('load', function () {
 		$('.preloader').fadeOut(100);
 	});
@@ -32,10 +32,11 @@ $(document).ready(function () {
 	});
 
 	$('.clients-logo').slick({
+		slidesToShow: 6,
 		infinite: true,
 		arrows: false,
 		autoplay: true,
-		autoplaySpeed: 2000
+		autoplaySpeed: 1000
 	});
 
 	$('.testimonial-slider').slick({
@@ -49,7 +50,7 @@ $(document).ready(function () {
 	$('.home-slider').slick({
 		slidesToShow: 1,
 		infinite: true,
-		arrows: false,
+		arrows: true,
 		autoplay: true,
 		autoplaySpeed: 2000
 	});

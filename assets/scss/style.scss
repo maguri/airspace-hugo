@@ -57,3 +57,50 @@
 @import 'templates/_404.scss';
 
 @import 'templates/_footer.scss';
+
+.slick-prev, .slick-next {
+    font-size: 0;
+    line-height: 0;
+    position: absolute;
+    top: 50%;
+    display: block;
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    -webkit-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    cursor: pointer;
+    color: transparent;
+    border: none;
+    outline: none;
+    background: transparent;
+}
+
+.slick-prev {
+  left: -45px;
+}
+
+.slick-prev:before {
+    content: '←';
+}
+
+.slick-next {
+  right: -45px;
+}
+
+.slick-next:before {
+    content: '→';
+}
+
+.slick-prev:before, .slick-next:before {
+    font-family: 'slick';
+    font-size: 35px;
+    line-height: 1;
+    opacity: .75;
+    color: white;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    border-radius: 10px;
+    background-color: #ffffff26;
+}

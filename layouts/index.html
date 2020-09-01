@@ -26,31 +26,6 @@
 {{ end }}
 <!-- /banner -->
 
-<!-- slides -->
-{{ if $data.homepage.slides.enable }}
-{{ with $data.homepage.slides }}
-<section class="slider slider-images">
-      <div class="container container-slider">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="block">
-              <div class="home-slider">
-                {{ range .bg_images }}
-                  <div class="crop">
-                    <img class="" src="{{ . | absURL }}">
-                  </div>
-                  {{ end}}
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-</section>
-{{ end }}
-{{ end }}
-
-<!-- /slides -->
-
 
 {{ if $data.homepage.about.enable }}
 {{ with $data.homepage.about }}
@@ -101,17 +76,38 @@
 {{ end }}
 {{ end }}
 
+
+<!-- slides -->
+{{ if $data.homepage.slides.enable }}
+{{ with $data.homepage.slides }}
+<section class="slider slider-images">
+      <div class="container container-slider">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="block">
+              <div class="home-slider">
+                {{ range .bg_images }}
+                  <div class="crop">
+                    <img class="" src="{{ . | absURL }}">
+                  </div>
+                  {{ end}}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+</section>
+{{ end }}
+{{ end }}
+
+<!-- /slides -->
+
 <!-- Service -->
 {{ if $data.homepage.service.enable }}
 {{ partial "service.html" . }}
 {{ end }}
 <!-- /service -->
 
-<!-- Call to action -->
-{{ if $data.homepage.cta.enable }}
-{{ partial "cta.html" . }}
-{{ end }}
-<!-- /Call to action -->
 
 {{ if $data.homepage.funfacts.enable }}
 {{ with $data.homepage.funfacts }}
@@ -159,5 +155,11 @@
 </section>
 {{ end}}
 {{ end}}
+
+<!-- Call to action -->
+{{ if $data.homepage.cta.enable }}
+{{ partial "cta.html" . }}
+{{ end }}
+<!-- /Call to action -->
 
 {{ end }}
