@@ -3,9 +3,12 @@
   background-size: cover;
   background-attachment: fixed;
   background-position: 10% 0%;
-  padding: 200px 0 280px 0;
+  padding: 20px 0 20px 0;
   position: relative;
-  @extend .overly;
+  
+  .overly {
+    @extend .overly;
+  }
 
   .block {
     color: #E3E3E4;
@@ -26,6 +29,32 @@
       font-size: 18px;
       line-height: 27px;
       font-weight: 300;
+    }
+  }
+}
+
+.slider-images {
+  padding: 0 0 0 0;
+  background-color: $primary-color;
+
+  .crop {
+    width: 400px;
+    height: 400px;
+    overflow: hidden;
+    margin: 10px;
+    position: relative;
+    img {
+      position: absolute;
+      margin: auto; 
+      min-height: 100%;
+      min-width: 100%;
+
+      /* For the following settings we set 100%, but it can be higher if needed 
+      See the answer's update */
+      left: -100%;
+      right: -100%;
+      top: -100%;
+      bottom: -100%;
     }
   }
 }
